@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<img class="img-full" src="../../../assets/imgs/bgAvion.png">
+
+<!--Formulario Reservaciones Vuelos-->
+<form [formGroup]="datos">
+    <div class="row justify-content-center m-2">
+        <div class="col-lg-4">
+            <h4 class="text-center">Enviar correos</h4>
+            <input type="email" placeholder="Correo" class="form-control" formControlName="correo">
+            <input type="text" placeholder="Asunto" class="form-control" formControlName="asunto">
+            <textarea placeholder="Mensaje" cols="40" rows="4" class="form-control" formControlName="mensaje"></textarea>
+            <div class="text-center">
+                <button class="btn btn-outline-danger" (click)="enviarcorreo()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,22 @@
+<section class="login-block">
+    <div class="container">
+        <div class="row ">
+            <div class="col login-sec">
+                <img src="../../assets/imgs/logo_redAviation.svg" width="150" class="logo"><br><br>
+                <form [formGroup]="formReg" class="login-form" (ngSubmit)="onSubmit()">
+                    <h3 class="text-white text-center">Registrate</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control m-2" formControlName="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control m-2" formControlName="password" placeholder="Password">
+                    </div>
+                    <input type="submit" class="btn btn-login btn-block m-2" value="Registrarse">
+                    <div class="form-group m-2" style="color: #fff;">
+                        ¿Ya tienes cuenta? <a  href="javascript:void(0);" routerLink="/login" style="color: #F40116;">Logueate</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

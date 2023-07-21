@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+    <img class="img-full" src="../../../assets/imgs/bgPaqueteria.png">
+
+<!--Formulario Reservaciones Vuelos-->
+<form [formGroup]="datos">
+    <div class="row justify-content-center m-2">
+        <div class="col-lg-4">
+            <h4 class="text-center">Enviar correos</h4>
+            <input type="email" placeholder="Name" class="form-control" formControlName="name">
+            <input type="text" placeholder="Salary" class="form-control" formControlName="salary">
+            <div class="text-center">
+                <button class="btn btn-outline-danger" (click)="enviarcorreo()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</form>
