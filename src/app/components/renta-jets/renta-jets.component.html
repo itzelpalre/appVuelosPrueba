@@ -8,8 +8,20 @@
             <h3>Renta de Jets Privados</h3>
             <p>Reserva la aeronave que más se adapte a tus necesidades.</p>
         </div>
+</div>
 
-        <div class="row">
-            
-        </div>
+<!--Card Jets-->
+<div class="container text-center">
+    <div class="row align-items-center">
+
+      <div class="col-6 mt-4" *ngFor="let jet of jets">
+        <h6>{{jet.title}}</h6>
+        <img src={{jet.img}}><br>
+        <button type="button" class="btn btn-all mt-2"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        Ver Info <span class="icon-calendar"></span>
+        </button>
+      </div>
+
     </div>
+  </div>
