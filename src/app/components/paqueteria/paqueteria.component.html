@@ -2,8 +2,74 @@
 
     <img class="img-full" src="../../../assets/imgs/bgPaqueteria.png">
 
+    <div class="container">
+        <div class="row justify-content-md-center m-4 text-center">
+            <h3>Servicio de Paquetería</h3>
+            <p>Detalla las características de tu paquete para enviarte una cotización.</p>
+        </div>
+
+        <div class="row">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Salida</label><br>
+                            
+                            <select class="form-control">
+                                <option value="Toluca">Toluca</option>
+                            </select>
+                          </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Destino</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput">
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Peso</label><br>
+                            
+    
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Cantidad</label><br>
+                            
+    
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Fecha de salida</label><br>
+                            
+    
+                          </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+   
+    
+  
+
 <!--Formulario Reservaciones Vuelos-->
-<form [formGroup]="datos">
+<!--<form [formGroup]="datos">
     <div class="row justify-content-center m-2">
         <div class="col-lg-4">
             <h4 class="text-center">Enviar correos</h4>
@@ -14,4 +80,14 @@
             </div>
         </div>
     </div>
-</form>
+</form>-->
+
+
+<!--<form (ngSubmit)="onSubmit(contactForm);" #contactForm="ngForm">
+    <input matInput placeholder="Nombre" #nombre maxlength="80" [(ngModel)]="ContactModel.name" name="Name" required>
+    <input matInput placeholder="Email" type="email" [(ngModel)]="ContactModel.email" name="Email" required>
+    <input matInput placeholder="Teléfono" #tel type="tel" [(ngModel)]="ContactModel.phone" name="Phone" maxlength="16">
+    <input matInput placeholder="Asunto" #asunto maxlength="60" [(ngModel)]="ContactModel.subject" name="Subject" required>
+    <textarea matInput placeholder="Mensaje" #msn maxlength="300" [(ngModel)]="ContactModel.msn" name="Msn" cols="25"></textarea>
+    <button  [disabled]="!contactForm.form.valid">Enviar</button>
+ </form>-->

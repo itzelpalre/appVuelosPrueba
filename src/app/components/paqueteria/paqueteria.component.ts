@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ContactForm } from '../../models/contactForm';
+import { EnvioFormulariosService } from '../../services/envio-formularios.service';
 
 @Component({
   selector: 'app-paqueteria',

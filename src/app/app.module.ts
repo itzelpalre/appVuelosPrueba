@@ -9,7 +9,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 import { PaqueteriaComponent } from './components/paqueteria/paqueteria.component';
 import { RentaJetsComponent } from './components/renta-jets/renta-jets.component';
 import { VuelosComponent } from './components/vuelos/vuelos.component';
@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule, 
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())

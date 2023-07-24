@@ -13,7 +13,6 @@ export class VuelosComponent {
 
   constructor(private http:HttpClient){
     this.datos = new FormGroup({
-      correo: new FormControl('', [Validators.required, Validators.email]),
       asunto: new FormControl('', [Validators.required, Validators.email]),
       mensaje: new FormControl('', [Validators.required, Validators.email])
     })
@@ -21,7 +20,6 @@ export class VuelosComponent {
 
   enviarcorreo(){
     let params = {
-      email:this.datos.value.correo,
       asunto:this.datos.value.asunto,
       mensaje:this.datos.value.mensaje
     }
