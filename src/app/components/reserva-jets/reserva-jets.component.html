@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-2">
+    <form [formGroup]="contacto" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+
+          <label>Nombres y Apellidos</label>
+          <input type="text" formControlName="nya" class="form-control">
+          <!--<div *ngIf="submitted && f.nya.errors" class="invalid-feedback">
+            <div *ngIf="f.nya.errors.required">Por favor, ingresa tus Nombres y Apellidos</div>
+          </div>-->
+          
+        </div>
+
+        <div class="form-group">
+
+          <label>Email</label>
+          <input type="text" formControlName="email" class="form-control">
+          <!--<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">El email es obligatorio</div>
+            <div *ngIf="f.email.errors.email">Por favor, ingresa un Email Válido</div>
+          </div>-->
+          
+        </div>
+
+        <div class="form-group">
+
+          <label>Asunto</label>
+          <input type="text" formControlName="asunto" class="form-control">
+          <!--<div *ngIf="submitted && f.asunto.errors" class="invalid-feedback">
+            <div *ngIf="f.asunto.errors.required">Por favor, ingresa tu Asunto</div>
+          </div>-->
+          
+        </div>
+
+        <div class="form-group">
+
+          <label>Fecha de Ingreso</label>
+          <input type="date" formControlName="fingreso" id="fingreso" [min]="ahora" [(ngModel)]="fingreso" (ngModelChange)="cambioFecha()" class="form-control">
+          <!--<div *ngIf="submitted && f.fingreso.errors" class="invalid-feedback">
+            <div *ngIf="f.fingreso.errors.required">Por favor, selecciona la Fecha de Ingreso</div>
+          </div>-->
+          
+        </div>
+
+        <div class="form-group">
+
+          <label>Fecha de Egreso</label>
+          <input type="date" formControlName="fegreso" id="fegreso" [min]="deshabilitar" class="form-control">
+          <!--<div *ngIf="submitted && f.fegreso.errors" class="invalid-feedback">
+            <div *ngIf="f.fegreso.errors.required">Por favor, seleccionar la Fecha de Egreso</div>
+          </div>-->
+          
+        </div>
+
+        <div class="form-group">
+
+          <label>Mensaje</label>
+          <textarea class="form-control" formControlName="mensaje" rows="3"></textarea>
+          <!--<div *ngIf="submitted && f.mensaje.errors" class="invalid-feedback">
+            <div *ngIf="f.mensaje.errors.required">Por favor, ingresa tu Mensaje</div>
+          </div>--> 
+          
+        </div>
+
+
+        <div class="form-group">
+
+          <button class="btn btn-primary">Aceptar</button>
+          
+        </div>
+
+       
+     </form>   
+</div>

@@ -4,5 +4,4 @@ export class ContactForm{
     public phone:number;
     public subject:string;
     public msn:string;
-    
 }

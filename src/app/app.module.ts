@@ -11,10 +11,22 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 import { PaqueteriaComponent } from './components/paqueteria/paqueteria.component';
-import { RentaJetsComponent } from './components/renta-jets/renta-jets.component';
 import { VuelosComponent } from './components/vuelos/vuelos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardPaginatorComponent } from './components/card-paginator/card-paginator.component';
+
+/* Angular Material */
+
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon'
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { ReservaJetsComponent } from './components/reserva-jets/reserva-jets.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +35,10 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegistroComponent,
     PaqueteriaComponent,
-    RentaJetsComponent,
     VuelosComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardPaginatorComponent,
+    ReservaJetsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +46,16 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule, 
     HttpClientModule,
+    MatPaginatorModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSelectModule,
+    MatInputModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

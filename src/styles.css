@@ -117,3 +117,6 @@ input {
 .btn-all {
   background-color: #DDBA87;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

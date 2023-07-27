@@ -1,0 +1,79 @@
+<app-navbar></app-navbar>
+
+<!--<p>
+  <mat-toolbar>
+    <span>Renta Jets Privados</span>
+  </mat-toolbar>
+</p>-->
+
+<img class="img-full" src="../../../assets/imgs/fondoAvion.png" width="100%">
+<div class="container">
+  <div class="row justify-content-md-center m-4 text-center">
+    <h2 class="text-center">Renta Jets Privados</h2>
+      <p>Reserva la aeronave que más se adapte a tus necesidades.</p>
+  </div>
+</div>
+
+
+<div style="margin: 15px">
+  <div style="display: flex">
+    <!--<mat-form-field appearance="fill" class="example-form-field">
+      <mat-label> -Sorting- </mat-label>
+      <mat-select [formControl]="sortOrderControl">
+        <mat-option value="">-select-</mat-option>
+        <mat-option value="id-by-desc">Id By Desc</mat-option>
+        <mat-option value="id-by-asc">Id By Asc</mat-option>
+        <mat-option value="year-by-desc">Year By Desc</mat-option>
+        <mat-option value="year-by-asc">Year By Asc</mat-option>
+        <mat-option value="color-by-desc">Color By Desc</mat-option>
+        <mat-option value="color-by-asc">Color By Asc</mat-option>
+      </mat-select>
+    </mat-form-field>-->
+
+    <!--<mat-form-field class="example-form-field">
+      <mat-label>Search By Car Name</mat-label>
+      <input matInput type="text" [formControl]="searchKey" />
+      <button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="searchByName()"
+      >
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>-->
+    <div class="example-form-field">
+      <mat-paginator
+        [length]="totalRecords"
+        [pageSize]="pageSize"
+        [pageIndex]="pageIndex"
+        (page)="handlePageEvent($event)"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+  <div class="my-container-wrap text-center">
+    <mat-card class="example-card text-center" *ngFor="let item of cars">
+      <mat-card-header>
+        <mat-card-title style="text-align: center;">{{ item.name }}</mat-card-title>
+        <!--<button
+          mat-mini-fab
+          matTooltip="Primary"
+          color="primary"
+          aria-label="Example mini fab with a heart icon"
+        >
+          {{ item.id }}
+        </button>-->
+      </mat-card-header>
+      <img mat-card-image src="{{ item.imageURL }}" />
+      <mat-card-content>
+        <button (click)="infoJet(item.id)" type="button" class="btn btn-all mt-2"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+        Ver Info <span class="icon-calendar"></span>
+        </button>
+        <!--<p>Color: {{ item.color }}</p>
+        <p>Model Year: {{ item.year }}</p>-->
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

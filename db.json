@@ -1,0 +1,70 @@
+{
+  "Cars": [
+    {
+      "id": 1,
+      "name": "Gulfstream G450",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/gulfstream_G450.png",
+      "color": "Red"
+    },
+    {
+      "id": 2,
+      "name": "Cessna Citation III",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/Cessna_Citation_III.png",
+      "color": "Red"
+    },
+    {
+      "id": 3,
+      "name": "Falcon 200",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/Falcon_200.png",
+      "color": "Red"
+    },
+    {
+      "id": 4,
+      "name": "Cessna Citation II",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/Cessna_Citation_ II.png",
+      "color": "Red"
+    },
+    {
+      "id": 5,
+      "name": "Hawker 800",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/hawker_800.png",
+      "color": "Red"
+    },
+    {
+      "id": 6,
+      "name": "Learjet 45",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/Learjet_45.png",
+      "color": "Red"
+    },
+    {
+      "id": 7,
+      "name": "Chalenger CL-600",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/Chalenger_CL-600.png",
+      "color": "Red"
+    },
+    {
+      "id": 8,
+      "name": "Learjet 35A",
+      "year": 2023,
+      "imageURL": "../../assets/imgs/AERONAVES/Learjet_35A.png",
+      "color": "Red"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
