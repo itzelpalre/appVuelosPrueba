@@ -9,15 +9,15 @@
 </div>
 
 
-    <div class="container">
+    <div class="container p-3">
         <div class="row">
-            <form>
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Salida</label><br>
                             
-                            <select class="form-control">
+                            <select class="form-control" formControlName="salida">
                                 <option value="Toluca">Toluca</option>
                             </select>
                           </div>
@@ -26,7 +26,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Destino</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput">
+                            <input type="text" class="form-control" formControlName="destino">
                           </div>
                     </div>
                 </div>
@@ -34,19 +34,15 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Peso</label><br>
-                            
-    
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Peso kg</label><br>
+                            <input type="number" class="form-control" formControlName="peso">
                           </div>
                     </div>
-                </div>
 
-                <div class="row">
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Cantidad</label><br>
-                            
-    
+                            <input type="number" class="form-control" formControlName="cantidad">
                           </div>
                     </div>
                 </div>
@@ -55,11 +51,16 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Fecha de salida</label><br>
-                            
-    
+                            <input type="date" class="form-control" formControlName="fsalida">
                           </div>
                     </div>
+
+                    <div class="text-center">
+                        <button class="button btn btn-outline-danger" type="submit">Enviar</button>
+                    </div>
+                    
                 </div>
+
             </form>
         </div>
     </div>

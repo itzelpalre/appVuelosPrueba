@@ -108,12 +108,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-input {
-    border-top: 0 !important;
-    border-left: 0 !important;
-    border-right: 0 !important;
-}
-
 .btn-all {
   background-color: #DDBA87;
 }

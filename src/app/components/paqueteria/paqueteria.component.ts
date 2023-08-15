@@ -4,6 +4,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactForm } from '../../models/contactForm';
 import { EnvioFormulariosService } from '../../services/envio-formularios.service';
 
+//Servicio para el envío del formulario
+import { FormBuilder } from '@angular/forms';
+
 @Component({
   selector: 'app-paqueteria',
   templateUrl: './paqueteria.component.html',
@@ -12,12 +15,25 @@ import { EnvioFormulariosService } from '../../services/envio-formularios.servic
 export class PaqueteriaComponent {
 
   datos:FormGroup;
+  checkoutForm;
 
-  constructor(private http:HttpClient){
+  constructor(
+    private http:HttpClient,
+    private formBuilder: FormBuilder,
+    ){
     this.datos = new FormGroup({
       name: new FormControl('', [Validators.required]),
       salary: new FormControl('', [Validators.required])
     })
+
+    /*Campos Form Paqueteria*/
+    this.checkoutForm = this.formBuilder.group({
+      salida: '',
+      destino: '',
+      peso: '',
+      cantidad: '',
+      fsalida: ''
+    });
   }
 
   enviarcorreo(){
@@ -29,6 +45,12 @@ export class PaqueteriaComponent {
     this.http.post('http://localhost:3000/api/employees', params).subscribe(resp=>{
       console.log(resp);
     })
+  }
+
+  onSubmit(data){
+    console.log(data);
+    /*this.checkoutForm.reset();
+    console.warn('se ha enviado', customerData);*/
   }
 
 }
