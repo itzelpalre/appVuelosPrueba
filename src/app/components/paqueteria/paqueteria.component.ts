@@ -48,9 +48,10 @@ export class PaqueteriaComponent {
   }
 
   onSubmit(data){
+    this.http.post(' http://localhost:3000/Cars', data).subscribe((result)=> {
+      console.log(result);
+    });
     console.log(data);
-    /*this.checkoutForm.reset();
-    console.warn('se ha enviado', customerData);*/
   }
 
 }

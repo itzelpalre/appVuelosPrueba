@@ -55,6 +55,39 @@
       "year": 2023,
       "imageURL": "../../assets/imgs/AERONAVES/Learjet_35A.png",
       "color": "Red"
+    },
+    {
+      "name": "itzel",
+      "address": "toluca",
+      "email": "itzel@gmail.com",
+      "rating": "8",
+      "id": 9
+    },
+    {
+      "salida": "Toluca",
+      "destino": "Mty",
+      "peso": 16,
+      "cantidad": 3,
+      "id": 10
+    },
+    {
+      "salida": "Toluca",
+      "destino": "SLP",
+      "peso": 36,
+      "cantidad": 2,
+      "fsalida": "2023-08-16",
+      "email": "itzel@gmail.com",
+      "id": 11
+    },
+    {
+      "salida": "Toluca",
+      "destino": "Guadalajara",
+      "peso": 16,
+      "cantidad": 3,
+      "fsalida": "2023-08-19",
+      "email": "itzelpalmareyes@gmail.com",
+      "telefono": 7226501277,
+      "id": 12
     }
   ],
   "comments": [

@@ -11,13 +11,13 @@
 
     <div class="container p-3">
         <div class="row">
-            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+            <form #userpaqueteria="ngForm" (ngSubmit)="onSubmit(userpaqueteria.value)">
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Salida</label><br>
                             
-                            <select class="form-control" formControlName="salida">
+                            <select class="form-control" name="salida" ngModel>
                                 <option value="Toluca">Toluca</option>
                             </select>
                           </div>
@@ -26,7 +26,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Destino</label>
-                            <input type="text" class="form-control" formControlName="destino">
+                            <input type="text" class="form-control" name="destino" ngModel>
                           </div>
                     </div>
                 </div>
@@ -35,14 +35,14 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Peso kg</label><br>
-                            <input type="number" class="form-control" formControlName="peso">
+                            <input type="number" class="form-control" name="peso" ngModel>
                           </div>
                     </div>
 
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Cantidad</label><br>
-                            <input type="number" class="form-control" formControlName="cantidad">
+                            <input type="number" class="form-control" name="cantidad" ngModel>
                           </div>
                     </div>
                 </div>
@@ -51,15 +51,31 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Fecha de salida</label><br>
-                            <input type="date" class="form-control" formControlName="fsalida">
+                            <input type="date" class="form-control" name="fsalida" ngModel>
                           </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Email de contacto</label><br>
+                            <input type="email" class="form-control" name="email" ngModel>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label"><span class="icon-airplane"></span> Teléfono de contacto</label><br>
+                            <input type="number" class="form-control" name="telefono" ngModel>
+                        </div>
                     </div>
 
                     <div class="text-center">
                         <button class="button btn btn-outline-danger" type="submit">Enviar</button>
                     </div>
-                    
                 </div>
+
 
             </form>
         </div>
@@ -67,7 +83,6 @@
 
     
 
-   
     
   
 

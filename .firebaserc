@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "hosting-app-red-hibrida"
+  },
+  "targets": {
+    "hosting-app-red-hibrida": {
+      "hosting": {
+        "appRedAviation_Itzael": [
+          "hosting-app-red-hibrida"
+        ]
+      }
+    }
+  }
+}

@@ -1,1 +1,10 @@
-{}
+{
+  "hosting": {
+    "public": "dist/app-red-aviation-itzael",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
