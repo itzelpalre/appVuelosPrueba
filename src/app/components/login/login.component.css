@@ -1,3 +1,16 @@
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    margin: 5px;
+    display: inline-block;
+    padding: 5px
+}
+
+.container-error-message {
+
+}
+
 .login-block {
     background-image: url('../../../assets/imgs/bgSlides.png');
     background-size: cover;

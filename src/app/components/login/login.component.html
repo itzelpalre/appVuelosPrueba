@@ -6,10 +6,20 @@
                 <form [formGroup]="formLogin" class="login-form" (ngSubmit)="onSubmit()">
                     <h3 class="text-white text-center">Inicio de sesión</h3>
                     <div class="form-group">
-                        <input type="text" class="form-control m-2" formControlName="email" placeholder="Email">
+                        <div class="alert-danger" *ngIf="formLogin.value.email && (formLogin.value.email.dirty || formLogin.value.email.touched)">
+                            <div class="container-error-message">
+                                <span>*Email requerido</span>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control m-2" formControlName="email" required placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control m-2" formControlName="password" placeholder="Password">
+                        <div class="alert-danger" *ngIf="formLogin.value.email && (formLogin.value.email.dirty || formLogin.value.email.touched)">
+                            <div class="container-error-message">
+                                <span>*Password requerido</span>
+                            </div>
+                        </div>
+                        <input type="password" class="form-control m-2" formControlName="password" required placeholder="Password">
                     </div>
                     <input type="submit" class="btn btn-login btn-block m-2" value="Loguearse">
                     <div class="form-group m-2" style="color: #fff;">

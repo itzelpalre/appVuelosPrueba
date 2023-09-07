@@ -27,6 +27,7 @@ import {MatIconModule} from '@angular/material/icon'
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { ReservaJetsComponent } from './components/reserva-jets/reserva-jets.component';
+import { RutasVuelosComponent } from './components/rutas-vuelos/rutas-vuelos.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReservaJetsComponent } from './components/reserva-jets/reserva-jets.com
     VuelosComponent,
     NavbarComponent,
     CardPaginatorComponent,
-    ReservaJetsComponent
+    ReservaJetsComponent,
+    RutasVuelosComponent
   ],
   imports: [
     BrowserModule,

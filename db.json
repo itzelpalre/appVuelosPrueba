@@ -88,6 +88,16 @@
       "email": "itzelpalmareyes@gmail.com",
       "telefono": 7226501277,
       "id": 12
+    },
+    {
+      "salida": "Toluca",
+      "destino": "Los Angeles",
+      "peso": 100,
+      "cantidad": 13,
+      "fsalida": "2023-09-13",
+      "email": "ingeniero@gmail.com",
+      "telefono": 7856142549,
+      "id": 13
     }
   ],
   "comments": [

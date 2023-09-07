@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -16,8 +16,8 @@ export class LoginComponent {
     private router: Router
   ) {
     this.formLogin = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl()
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required])
     })
   }
 
@@ -25,11 +25,18 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.userService.login(this.formLogin.value)
+
+    if(this.formLogin.valid){
+      this.userService.login(this.formLogin.value)
       .then(response => {
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/vuelos']);
       })
       .catch(error => console.log(error));
+    }else {
+      console.log("form no valido");
+    }
+
+    
   }
 
   onClick(){

@@ -8,11 +8,13 @@ import { VuelosComponent } from './components/vuelos/vuelos.component';
 import { PaqueteriaComponent } from './components/paqueteria/paqueteria.component';
 import { CardPaginatorComponent } from './components/card-paginator/card-paginator.component';
 import { ReservaJetsComponent } from './components/reserva-jets/reserva-jets.component';
+import { RutasVuelosComponent } from './components/rutas-vuelos/rutas-vuelos.component';
 
 const routes: Routes = [
   {path:'', pathMatch: 'full', redirectTo: '/login'},
   {path:'login', component: LoginComponent},
   {path:'registro', component: RegistroComponent},
+  {path:'vuelos', component: RutasVuelosComponent, ...canActivate(()=> redirectUnauthorizedTo(['/registro']))},
   {path:'dashboard', component: DashboardComponent, ...canActivate(()=> redirectUnauthorizedTo(['/registro']))},
   {path:'vuelos', component: VuelosComponent, ...canActivate(()=> redirectUnauthorizedTo(['/registro']))},
   {path:'paqueteria', component: PaqueteriaComponent, ...canActivate(()=> redirectUnauthorizedTo(['/registro']))},

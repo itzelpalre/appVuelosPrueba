@@ -1,0 +1,94 @@
+<div class="container">
+
+    <div class="section-header">
+      <h2 style="margin:0;">Agrega tus Rutas de Vuelo</h2>
+    </div>
+  
+  </div>
+  
+  <main id="main">
+   
+    <!--Modulo Agregar Rutas-->
+    <section id="cta" class="cta">
+      <div class="container text-center">
+        <div class="row g-5 justify-content-md-center">
+          <form [formGroup]="addRutaForm">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>Agregar Ruta</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <div class="row">
+                  <div class="col-md-4">
+                    <mat-form-field>
+                        <mat-label>Salida</mat-label>
+                        <select matNativeControl formControlName="salida" required>
+                          <option value="" selected></option>
+                          <option *ngFor="let ruta of rutas" [value]="ruta.value">
+                            {{ruta.viewValue}}
+                          </option>
+                        </select>
+                      </mat-form-field>
+                  </div>
+                  <div class="col-md-4">
+                    <mat-form-field>
+                        <mat-label>Destino</mat-label>
+                        <select matNativeControl formControlName="destino" required>
+                          <option value="" selected></option>
+                          <option *ngFor="let destino of destinos" [value]="destino.value">
+                            {{destino.viewValue}}
+                          </option>
+                        </select>
+                      </mat-form-field>
+                  </div>
+                  <div class="col-md-4">
+                    
+                    <mat-form-field class="example-full-width">
+                      <input formControlName="fecha" matInput type="date" required>
+                    </mat-form-field>
+          
+                  </div>
+                </div>
+                
+              </mat-card-content>
+              <mat-card-actions>
+                <button (click)="onSubmit(addRutaForm.value)" mat-raised-button color="primary">Agregar</button>
+              </mat-card-actions>
+            </mat-card>
+          </form>  
+          
+          <!--Table Mis Rutas-->
+          <div class="mt-3">
+            <table class="table table align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Salida</th>
+                  <th scope="col">Destino</th>
+                  <th scope="col">Fecha de Salida</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let rutas of ruta">
+                  <td>{{rutas.salida}}</td>
+                  <td>{{rutas.destino}}</td>
+                  <td>{{rutas.fecha | date:'dd-MM-yyyy'}}</td>
+                </tr> 
+              </tbody>
+            </table>
+          </div>
+          
+          
+        </div>
+  
+      </div>
+    </section>
+    <!--End Modulo Agregar Rutas-->
+  
+  </main>
+  
+  
+  
+  
+      
+      
+     
